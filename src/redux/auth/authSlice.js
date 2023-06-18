@@ -17,10 +17,17 @@ const authSlice = createSlice({
             state.token = action.payload.token;
             state.isLoggedIn = true;
         },
+        [register.rejected]() {
+            alert('Username or Email are already being used')
+
+        },
         [logIn.fulfilled](state, action) {
             state.user = action.payload.user;
             state.token = action.payload.token;
             state.isLoggedIn = true;
+        },
+        [logIn.rejected]() {
+            alert('Email or password is incorrect, or both');
         },
         [logOut.fulfilled](state) {
             state.user = { name: null, email: null};
