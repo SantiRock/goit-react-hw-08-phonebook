@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { logOut } from "redux/auth/operations";
 import { fetchContacts, addContact, deleteContact } from "./operations";
 
 // Primer estado ----
@@ -20,9 +21,7 @@ const handleRejected = (state, action) => {
     state.error = action.payload;
 };
 
-
 // Slice -----
-
 
 const contactsSlice = createSlice({
     name: "contacts",
@@ -51,43 +50,13 @@ const contactsSlice = createSlice({
             task => task.id === action.payload.id
           );
           state.items.splice(index, 1);
-        },    
-    },
-})
-
-//export const { addContact, deleteContact } = contactsSlice.actions;
-export const contactsReducer = contactsSlice.reducer;
-
-/*
-const contactsSlice = createSlice({
-    name: "contacts",
-    initialState: contactsInitialState,
-    reducers: {
-       addContact : {
-            reducer(state, action) {
-            
-                for (let contact of state) {
-                    if(contact.name.toLowerCase() === action.payload.name.toLowerCase()) {
-                        //setMessage(name + ' is already in contacts')
-                        alert(action.payload.name + ' is already in contacts')
-                        return 
-                    }
-                }
-                state.push(action.payload);
-            },
-            prepare(personObject) {
-                return {
-                    payload: {
-                        name: personObject.name,
-                        number: personObject.number,
-                        id: nanoid(),
-                    },
-                };
-            },
         },
-       deleteContact(state, action) {
-        const index = state.findIndex(contact => contact.id === action.payload);
-        state.splice(index, 1);
-       },
+        [logOut.fulfilled](state) {
+            state.items = [];
+            state.error = null;
+            state.isLoading = false;
+        }   
     },
-})*/
+});
+
+export const contactsReducer = contactsSlice.reducer;
