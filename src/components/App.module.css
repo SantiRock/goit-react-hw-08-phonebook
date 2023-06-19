@@ -1,6 +1,8 @@
 .container {
-    margin: 20px;
+    margin: auto;
+    padding: 0 20px;
     min-width: 280px;
+    max-width: 960px;
 }
 
 ul {

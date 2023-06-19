@@ -18,10 +18,8 @@ export default function Contacts() {
     }, [dispatch]);
   
     return (
-      <div className={css.container}>
-        <Helmet>
-            <h1>Phonebook</h1>
-        </Helmet>    
+      <div className={css.container}>  
+        <h1>Phonebook</h1>  
         <ContactForm />
         <h2>Contacts</h2>
         {isLoading && !error && <p className={css.loading}>Loading...</p>}

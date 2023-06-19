@@ -16,11 +16,12 @@ export default function Home() {
     return (
         <div style={styles.container}>
             <h1 style={styles.title}>
-                Task manager welcome page{' '}
+                Phonebook App{' '}
                 <span role="img" aria-label="Greeting icon">
-                    💁‍♀️
+                 🙋🏽‍♂️
                 </span>
             </h1>
+            <p>Just Log In</p>
         </div>
     )
 }
