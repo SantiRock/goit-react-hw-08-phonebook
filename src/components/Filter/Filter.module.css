@@ -1,6 +1,13 @@
 .p {
-    margin:0;
-    margin-bottom: 5px;
+    
+    margin-bottom: 10px;
     width: max-content;
     font-size: 14px;
+}
+
+.input {
+    padding: 5px 10px;
+    background-color: rgb(234, 234, 234);
+    border: 1px solid rgb(208, 208, 208);
+    outline: none;
 }

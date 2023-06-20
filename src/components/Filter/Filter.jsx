@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { setStatusFilter } from 'redux/contacts/sliceFilter';
 import css from './Filter.module.css';
+import { TextField } from '@mui/material';
 
 const Filter = () => {
   const dispatch = useDispatch();
@@ -9,7 +10,8 @@ const Filter = () => {
     return(
       <>
         <p className={css.p}>Find contacts by name</p>
-        <input 
+        <input
+        className={css.input}
         onChange={handleFilterChange}
         type='text'
         name='filter'

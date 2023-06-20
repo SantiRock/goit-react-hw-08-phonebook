@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { register, logIn, logOut, refreshUser } from "./operations";
+//import { Alert } from "@mui/material";
 
 const initialState = {
     user: { name: null, email: null },
@@ -18,6 +19,7 @@ const authSlice = createSlice({
             state.isLoggedIn = true;
         },
         [register.rejected]() {
+            //<Alert severity="error">Username or Email are already being used</Alert>
             alert('Username or Email are already being used')
 
         },

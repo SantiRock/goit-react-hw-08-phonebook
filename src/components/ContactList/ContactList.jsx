@@ -7,7 +7,7 @@ export const ContactList = () => {
   const visibleContacts = useSelector(selectVisibleTasks);
 
   return (
-    <ul>
+    <ul className={css.ul}>
       {visibleContacts.map( person => (
         <li className={css.li} key={person.id}>
           <Contact contact={person}/>

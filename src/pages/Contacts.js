@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { ContactList } from "components/ContactList/ContactList";
 import { ContactForm } from "components/ContactForm/ContactForm";
@@ -17,7 +18,10 @@ export default function Contacts() {
     }, [dispatch]);
   
     return (
-      <div className={css.container}>  
+      <div className={css.container}>
+        <Helmet>
+          <title>Contacts</title>
+        </Helmet> 
         <h1>Phonebook</h1>  
         <ContactForm />
         <h2>Contacts</h2>

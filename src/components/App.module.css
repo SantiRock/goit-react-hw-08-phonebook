@@ -1,6 +1,6 @@
 .container {
     margin: auto;
-    padding: 0 20px;
+    padding: 0 30px;
     min-width: 280px;
     max-width: 960px;
 }
@@ -20,5 +20,5 @@ h2 {
 }
 
 .loading {
-    color: red;
+    color: rgb(131, 81, 81);
 }

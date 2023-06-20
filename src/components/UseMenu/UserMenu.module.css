@@ -6,5 +6,7 @@
   }
   
   .username {
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 10px;
   }

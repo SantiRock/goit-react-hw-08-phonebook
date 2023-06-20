@@ -8,9 +8,9 @@ export const Contact = ({ contact }) => {
     const handleDelete = () => dispatch(deleteContact(contact.id));
 
     return (
-        <div>
-            {contact.name}: {contact.number}
-            <button className={css.btndel} onClick={handleDelete}>Delete</button>
+        <div className={css.contact}>
+            {contact.name} : {contact.number} 
+            <button className={css.btndel} onClick={handleDelete}> Delete</button>
         </div>
     )
 }
