@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { setStatusFilter } from 'redux/contacts/sliceFilter';
 import css from './Filter.module.css';
-import { TextField } from '@mui/material';
 
 const Filter = () => {
   const dispatch = useDispatch();
